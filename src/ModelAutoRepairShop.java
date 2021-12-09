@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ModelAutoRepairShop {
     public static void main(String[] args) {
-        Scanner scanner =new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Shop name ");
         String shopName = scanner.nextLine();
 
@@ -15,13 +15,13 @@ public class ModelAutoRepairShop {
         System.out.print("Enter numbers of Economy Cars ");
         int econLux = Integer.parseInt(scanner.nextLine());
 
-        autoRepairShop.initializeAutoRepairShop(numLux,econLux);
+        autoRepairShop.initializeAutoRepairShop(numLux, econLux);
         autoRepairShop.simulateAutoRepairShop();
 
         System.out.print("Enter File name ");
         String fileName = scanner.nextLine();
         try {
-            autoRepairShop.generateAutoRepairShopStatistics(fileName);
+            autoRepairShop.generateAutoRepairShopStatistics(fileName + ".txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
